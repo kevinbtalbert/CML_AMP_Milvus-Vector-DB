@@ -51,12 +51,11 @@ tasks:
   
   - type: start_application
     name: CML LLM Chatbot
-    subdomain: cmlllm
-    script: 4_app/llm_rag_app.py
-    short_summary: Start CML LLM Chatbot application
+    subdomain: milvus
+    script: 4_app/milvus_start.py
+    short_summary: Start Milvus Server
     long_summary: This application requires an available GPU to run the LLM model. Startup may be delayed if autoscaling is being performed or fail if GPU cannot be scheduled on this workspace. Please contact your administrator for GPU scheduling.
     cpu: 2
-    memory: 16
-    gpu: 1
+    memory: 4
     environment_variables:
       TASK_TYPE: START_APPLICATION
